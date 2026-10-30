@@ -5,8 +5,7 @@ interface ExternalUser {
     address:{
         street:string;
         city: string;
-    },
-    phone: string
+    }
     
 }
 
@@ -15,7 +14,6 @@ userId: number;
 fullName: string;
 corporateEmail: string;
 location:string;
-phone: string
 };
 
 function MapUserResponse(user : ExternalUser):ProcessedUser{
@@ -24,7 +22,6 @@ userId: user.id,
 fullName: user.name,
 corporateEmail:user.email.toLowerCase(),
 location:`${user.address.street}, ${user.address.city}`,
-phone: user.phone
 };
 }
 
